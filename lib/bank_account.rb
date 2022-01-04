@@ -1,3 +1,5 @@
+require './lib/transaction'
+
 class BankAccount
     attr_accessor :balance, :transactions
     def initialize
@@ -7,5 +9,10 @@ class BankAccount
 
     def deposit(money)
         @balance += money
+        @transactions.push(Transaction.new("debit", money, time = Time.now, @balance))
     end 
+
+    def withdraw(money)
+    end 
+
 end 

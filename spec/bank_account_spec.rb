@@ -22,5 +22,13 @@ describe BankAccount do
         account.deposit(10)
         expect(account.balance).to eq(10)
     end
-
+    it "should add transaction to transactions array when deposit is made" do
+        account = BankAccount.new
+        account.deposit(10)
+        expect(account.transactions).to include(a_kind_of(Object))
+    end 
+    it "should respond to withdraw" do
+        account = BankAccount.new
+        expect(account).to respond_to(:withdraw).with(1).argument
+    end 
 end 
