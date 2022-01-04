@@ -13,4 +13,14 @@ describe BankAccount do
         account = BankAccount.new
         expect(account.transactions).to be_empty
     end 
+    it "should respond to deposit" do
+        account = BankAccount.new
+        expect(account).to respond_to(:deposit).with(1).argument
+    end 
+    it "should increase the balance by deposited amount" do
+        account = BankAccount.new
+        account.deposit(10)
+        expect(account.balance).to eq(10)
+    end
+
 end 
