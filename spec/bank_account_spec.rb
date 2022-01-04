@@ -31,4 +31,10 @@ describe BankAccount do
         account = BankAccount.new
         expect(account).to respond_to(:withdraw).with(1).argument
     end 
+    it "should decrease the balance by withdrawn amount" do
+        account = BankAccount.new
+        account.deposit(10)
+        account.withdraw(5)
+        expect(account.balance).to eq(5)
+    end
 end 
