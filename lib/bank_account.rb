@@ -1,6 +1,7 @@
 class BankAccount
-    attr_accessor :balance
+    attr_accessor :balance, :transactions
     def initialize
         @balance = 0 
+        @transactions = []
     end 
 end 

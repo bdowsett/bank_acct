@@ -9,4 +9,8 @@ describe BankAccount do
         account = BankAccount.new
         expect(account.balance).to eq(0)
     end 
+    it "is initilialized with zero transactions" do 
+        account = BankAccount.new
+        expect(account.transactions).to be_empty
+    end 
 end 
