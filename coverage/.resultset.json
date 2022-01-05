@@ -81,6 +81,32 @@
           null
         ]
       },
+      "/Users/bendowsett/Desktop/Projects/bank/spec/statement_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/bendowsett/Desktop/Projects/bank/lib/statement.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/bendowsett/Desktop/Projects/bank/spec/transaction_spec.rb": {
         "lines": [
           1,
@@ -95,6 +121,6 @@
         ]
       }
     },
-    "timestamp": 1641310489
+    "timestamp": 1641374499
   }
 }
