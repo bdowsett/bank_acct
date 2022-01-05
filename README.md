@@ -23,7 +23,7 @@ date || credit || debit || balance
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
-
+```
 USER STORIES 
 
 As a user 
@@ -53,5 +53,5 @@ I want to be able to see debits with dates on my statement
 As a user 
 so I can keep track of my finances 
 I want to be able to see a balance on my statement
+```
 
-![Screenshot 2022-01-04 at 11 15 33](https://user-images.githubusercontent.com/85438016/148051219-c9a794c8-a7fc-4bde-a546-197bbf35b029.png)
