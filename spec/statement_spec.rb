@@ -1,6 +1,5 @@
 require 'statement'
 
-
 describe Statement do
     it "it creates an instance of Statement class" do
         statement = Statement.new

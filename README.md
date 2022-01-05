@@ -1,5 +1,12 @@
 A small Bank acct programme using Ruby and TDD to demonstrate process
 
+### Approach 
+I decided that this implementation would require 3 classes 
+
+* BankAccount class - to handle the deposits, withdrawals and then store the transactions to the statement.
+* Transaction class - to create a transaction class with type, amount, current balance & time attributes that are passed by the account to the statement class. 
+* Statement class - stores the transactions and prints statement.
+
 ## Specification
 
 ### Requirements
@@ -54,4 +61,7 @@ As a user
 so I can keep track of my finances 
 I want to be able to see a balance on my statement
 ```
+
+
+
 
