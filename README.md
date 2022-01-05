@@ -62,6 +62,32 @@ so I can keep track of my finances
 I want to be able to see a balance on my statement
 ```
 
+## How to run
+Clone following repo and bundle 
+```
+git clone https://github.com/bdowsett/bank_acct.git
+bundle
 
+```
+Launch irb in terminal
 
+```
+irb
+require './lib/bank_account'
 
+account = BankAccount.new
+account.deposit(1000)
+account.deposit(2000)
+account.withdraw(500)
+account.statement.print
+
+```
+
+Output
+
+```
+date || credit || debit || balance
+01/05/2022 || || 500.00 || 2500.00
+01/05/2022 || 2000.00 || || 3000.00
+01/05/2022 || 1000.00 || || 1000.00
+```
