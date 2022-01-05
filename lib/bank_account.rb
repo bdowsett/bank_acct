@@ -1,19 +1,21 @@
 require './lib/transaction'
+require './lib/statement'
 
 class BankAccount
-    attr_accessor :balance, :transactions
+    attr_accessor :balance, :statement
     def initialize
         @balance = 0 
-        @transactions = []
+        @statement = Statement.new
     end 
 
     def deposit(money)
         @balance += money
-        @transactions.push(Transaction.new("debit", money, time = Time.now, @balance))
+        @statement.transactions.push(Transaction.new("credit", money, time = Time.now, @balance))
     end 
 
     def withdraw(money)
         @balance -= money
+        @statement.transactions.push(Transaction.new("debit", money, time = Time.now, @balance))
     end 
 
 end 

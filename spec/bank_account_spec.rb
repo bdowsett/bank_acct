@@ -9,9 +9,9 @@ describe BankAccount do
         account = BankAccount.new
         expect(account.balance).to eq(0)
     end 
-    it "is initilialized with zero transactions" do 
+    it "is initilialized with with a statement object" do 
         account = BankAccount.new
-        expect(account.transactions).to be_empty
+        expect(account.statement).to be_an_instance_of(Statement)
     end 
     it "should respond to deposit" do
         account = BankAccount.new
@@ -25,7 +25,7 @@ describe BankAccount do
     it "should add transaction to transactions array when deposit is made" do
         account = BankAccount.new
         account.deposit(10)
-        expect(account.transactions).to include(a_kind_of(Object))
+        expect(account.statement.transactions).to include(a_kind_of(Object))
     end 
     it "should respond to withdraw" do
         account = BankAccount.new

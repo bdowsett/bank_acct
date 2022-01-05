@@ -3,6 +3,7 @@ class Statement
   def initialize
     @transactions = []
   end 
+  
   def print
   end 
 end 
