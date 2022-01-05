@@ -1,5 +1,6 @@
 require 'statement'
 
+
 describe Statement do
     it "it creates an instance of Statement class" do
         statement = Statement.new
@@ -8,6 +9,17 @@ describe Statement do
     it "is initialized with zero transactions" do 
         statement = Statement.new
         expect(statement.transactions).to be_empty
+    end 
+    it "stores credits in transactions array" do
+        account = BankAccount.new
+        account.deposit(10)
+        expect(account.statement.transactions[0].type).to eql("credit")
+    end 
+    it "stores debits in transactions array" do
+        account = BankAccount.new
+        account.deposit(5)
+        account.withdraw(10)
+        expect(account.statement.transactions[1].type).to eql("debit")
     end 
     it "should respond to print" do
         statement = Statement.new
