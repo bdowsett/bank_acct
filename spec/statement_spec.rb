@@ -30,8 +30,6 @@ describe Statement do
     account = BankAccount.new
     account.deposit(5)
     account.withdraw(10)
-    expect do
-      account.statement.print
-    end.to output("date || credit || debit || balance\n#{Time.now.strftime('%m/%d/%Y')} || || 10.00 || -5.00\n#{Time.now.strftime('%m/%d/%Y')} || 5.00 || || 5.00\n").to_stdout
+    expect{account.statement.print}.to output("date || credit || debit || balance\n#{Time.now.strftime('%m/%d/%Y')} || || 10.00 || -5.00\n#{Time.now.strftime('%m/%d/%Y')} || 5.00 || || 5.00\n").to_stdout
   end
 end
