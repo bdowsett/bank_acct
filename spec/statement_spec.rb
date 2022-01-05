@@ -25,4 +25,10 @@ describe Statement do
         statement = Statement.new
         expect(statement).to respond_to(:print)
     end 
+    it "should print statement in correct format" do
+        account = BankAccount.new
+        account.deposit(5)
+        account.withdraw(10)
+        expect { account.statement.print }.to output("date || credit || debit || balance\n#{Time.now.strftime("%m/%d/%Y")} || || 10.00 || -5.00\n#{Time.now.strftime("%m/%d/%Y")} || 5.00 || || 5.00\n").to_stdout 
+    end
 end 
