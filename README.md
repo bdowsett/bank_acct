@@ -66,15 +66,15 @@ I want to be able to see a balance on my statement
 Clone following repo and bundle 
 ```
 git clone https://github.com/bdowsett/bank_acct.git
-bundle
 
+bundle
 ```
+
 Launch irb in terminal
 
 ```
 irb
 require './lib/bank_account'
-
 account = BankAccount.new
 account.deposit(1000)
 account.deposit(2000)
