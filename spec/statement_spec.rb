@@ -9,4 +9,8 @@ describe Statement do
         statement = Statement.new
         expect(statement.transactions).to be_empty
     end 
+    it "should respond to print" do
+        statement = Statement.new
+        expect(statement).to respond_to(:print)
+    end 
 end 
